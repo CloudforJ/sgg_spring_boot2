@@ -5,8 +5,10 @@ import com.atguigu.boot.bean.Pet;
 import com.atguigu.boot.bean.User;
 import com.atguigu.boot.config.MyConfig;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 public class MainApplication {
