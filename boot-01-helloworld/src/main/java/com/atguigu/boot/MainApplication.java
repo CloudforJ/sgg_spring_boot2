@@ -34,22 +34,34 @@ public class MainApplication {
          * Spring Boot总会检查这个组件是否在容器中有，如果有，就不会新创
          * 保持组件单实例
          */
-        User user = bean.user01();
-        User user1 = bean.user01();
-        System.out.println(user == user1);
+//        User user = bean.user01();
+//        User user1 = bean.user01();
+//        System.out.println(user == user1);
+//
+//
+//
+//        User user01 = run.getBean("user01", User.class);
+//        Pet tom = run.getBean("tom", Pet.class);
+//        System.out.println("用户的宠物：" + (user01.getPet() == tom));
+//
+//        String[] beanNamesForType = run.getBeanNamesForType(User.class);
+//        for (String s : beanNamesForType) {
+//            System.out.println(s);
+//        }
+//
+//        DBHelper bean1 = run.getBean(DBHelper.class);
+//        System.out.println(bean1);
 
+        boolean hasTom = run.containsBean("tom");
+        System.out.println("容器中包含tom组件：" + hasTom);
 
+        boolean hasUser01 = run.containsBean("user01");
+        System.out.println("容器中包含user01组件：" + hasUser01);
 
-        User user01 = run.getBean("user01", User.class);
-        Pet tom = run.getBean("tom", Pet.class);
-        System.out.println("用户的宠物：" + (user01.getPet() == tom));
+        boolean hasHaha = run.containsBean("haha");
+        System.out.println("容器中包含haha组件：" + hasHaha);
 
-        String[] beanNamesForType = run.getBeanNamesForType(User.class);
-        for (String s : beanNamesForType) {
-            System.out.println(s);
-        }
-
-        DBHelper bean1 = run.getBean(DBHelper.class);
-        System.out.println(bean1);
+        boolean hasHehe = run.containsBean("hehe");
+        System.out.println("容器中包含hehe组件：" + hasHehe);
     }
 }
