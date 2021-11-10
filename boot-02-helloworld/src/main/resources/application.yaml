@@ -1,7 +1,30 @@
 person:
-  userName: zhangsan
   boss: true
   birth: 1998/12/15
   age: 23
   interests: [篮球,足球]
-  
+  animal:
+    - 阿猫
+    - 阿狗
+  score:
+    english: 80
+    math: 90
+    chinese: 88
+  salary:
+    - 9990
+    - 9998
+    - 6789
+  pet:
+    name: xiaohua
+    weight: 6.8
+  allPets:
+    sick:
+      - {name:阿狗,weight:9.7}
+      - name: 阿猫
+        weight: 7.9
+      - name: 阿虫
+        weight: 7.3
+    health:
+      - {name:阿花,weight:9.7}
+      - {name:阿明,weight:9.6}
+  user-name: zhangsan
