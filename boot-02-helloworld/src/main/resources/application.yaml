@@ -1,0 +1,7 @@
+person:
+  userName: zhangsan
+  boss: true
+  birth: 1998/12/15
+  age: 23
+  interests: [篮球,足球]
+  
