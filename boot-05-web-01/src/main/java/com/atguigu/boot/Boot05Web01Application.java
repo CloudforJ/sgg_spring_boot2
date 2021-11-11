@@ -10,4 +10,8 @@ public class Boot05Web01Application {
         SpringApplication.run(Boot05Web01Application.class, args);
     }
 
+    public String hello() {
+        return null;
+    }
+
 }
