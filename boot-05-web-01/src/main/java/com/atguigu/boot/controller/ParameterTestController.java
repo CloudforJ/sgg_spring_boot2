@@ -1,5 +1,6 @@
 package com.atguigu.boot.controller;
 
+import org.springframework.boot.autoconfigure.quartz.QuartzTransactionManager;
 import org.springframework.boot.web.servlet.server.Session;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
@@ -42,6 +43,26 @@ public class ParameterTestController {
     public Map postMethod(@RequestBody String content) {
         Map<String, Object> map = new HashMap<>();
         map.put("content", content);
+        return map;
+    }
+
+    @GetMapping("/cars/{path}")
+    public Map carsSell(@MatrixVariable("low") Integer low,
+                        @MatrixVariable("brand") List<String> brand,
+                        @PathVariable("path") String path) {
+        Map<String, Object> map = new HashMap<>();
+        map.put("low", low);
+        map.put("brand", brand);
+        map.put("path", path);
+        return map;
+    }
+
+    @GetMapping("/boss/{bossId}/{empId}")
+    public Map boss(@MatrixVariable(value = "age", pathVar = "bossId") Integer bossAge,
+                    @MatrixVariable(value = "age", pathVar = "empId") Integer empAge) {
+        Map<String, Object> map = new HashMap<>();
+        map.put("bossAge", bossAge);
+        map.put("empAge", empAge);
         return map;
     }
 }
